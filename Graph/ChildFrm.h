@@ -32,4 +32,5 @@ public:
 // Generated message map functions
 protected:
 	DECLARE_MESSAGE_MAP()
+	virtual BOOL OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext);
 };

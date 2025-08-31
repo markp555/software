@@ -65,6 +65,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	mdiTabParams.m_bTabIcons = FALSE;    // set to TRUE to enable document icons on MDI taba
 	mdiTabParams.m_bAutoColor = TRUE;    // set to FALSE to disable auto-coloring of MDI tabs
 	mdiTabParams.m_bDocumentMenu = TRUE; // enable the document menu at the right edge of the tab area
+	mdiTabParams.m_bEnableTabSwap = TRUE;
 	EnableMDITabbedGroups(TRUE, mdiTabParams);
 
 	if (!m_wndMenuBar.Create(this))

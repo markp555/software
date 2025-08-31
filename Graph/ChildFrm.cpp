@@ -7,6 +7,7 @@
 #include "Graph.h"
 
 #include "ChildFrm.h"
+#include "GraphForm.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -55,3 +56,17 @@ void CChildFrame::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 // CChildFrame message handlers
+
+
+BOOL CChildFrame::OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext)
+{
+	// TODO: Add your specialized code here and/or call the base class
+	if (!m_wndSplitter.CreateStatic(this, 1, 2))
+		return FALSE;
+	if (!m_wndSplitter.CreateView(0, 0, RUNTIME_CLASS(CGraphForm), { 250,250 }, pContext))
+		return FALSE;
+	if (!m_wndSplitter.CreateView(0, 1, pContext->m_pNewViewClass, { 250,250 }, pContext))
+		return FALSE;
+	//return CMDIChildWndEx::OnCreateClient(lpcs, pContext);
+	return TRUE;
+}

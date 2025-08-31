@@ -187,6 +187,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="GraphDoc.h" />
+    <ClInclude Include="GraphForm.h" />
     <ClInclude Include="GraphView.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="OutputWnd.h" />
@@ -198,6 +199,7 @@
     <ClCompile Include="ChildFrm.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="GraphDoc.cpp" />
+    <ClCompile Include="GraphForm.cpp" />
     <ClCompile Include="GraphView.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="OutputWnd.cpp" />
